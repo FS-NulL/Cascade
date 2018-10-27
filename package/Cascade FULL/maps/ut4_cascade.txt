@@ -1,0 +1,163 @@
+================================================================================
+* Urban Terror Level * 
+--------------------------------------------------------------------------------
+Title			: Cascade
+Author			: Jonathan "$NulL" Norton
+Date			: 2009 - 2010
+
+
+--------------------------------------------------------------------------------
+* Level Description *
+--------------------------------------------------------------------------------
+A river based assault on a partially underground facility. 
+
+
+--------------------------------------------------------------------------------
+
+Single Player		: No.
+Deathmatch (FFA)	: Yes (10 Spawns)
+Last Man Standing	: Yes (10 Spawns)
+Team Deathmatch		: Yes (24 Spawns/team)
+Team Survivor 		: Yes ( 2 Spawn sets)
+Capture and Hold	: Yes ( 3 Capture Points)
+Follow the leader	: Yes ( 1 Spawn Set)
+Capture the flag	: Yes (16 Spawns/team)
+Bomb Mode		: Yes ( 1 Spawn Set)
+Jump Mode		: No.
+
+Suggested player load	: 8-14 NOT more.
+New Textures		: Yes
+New Sounds		: Yes
+New Models		: Yes
+
+
+--------------------------------------------------------------------------------
+* Construction *
+--------------------------------------------------------------------------------
+Map Base		: None
+Prefabs used		: None
+Mapobjects used		: LT1's (www.blackrayne.net)
+				Tv+
+				Lights
+				Barrels
+				Tires
+				
+			: ???'s
+				Helicopter
+				
+
+Editor used		: Custom Q3Radiant build 204
+			  3DSMax 
+Other utilities used	: Photoshop, Q3Map2(FS_bumpy_2a), q3map2toolz, Notepad, 
+			  Urban Terror BSP, FS Partice Studio.
+Compile machine		: AMD 3000XP 1024Mb Ram
+Compile time		: BSP  : ~ 2 Minute
+			: VIS  : ~ 3 Hours
+			: LIGHT: ~ 4 Hours
+Compile Switches        : BSP -meta
+			  VIS -saveprt
+			  RAD -bounce 9 -fast -patchshadows -samples 2 -radbump -shade
+
+
+--------------------------------------------------------------------------------
+* OTHER LEVELS BY $NulL *
+--------------------------------------------------------------------------------
+Subterra
+Canyon
+Mandolin
+Railed
+Bohemia
+
+--------------------------------------------------------------------------------
+* CREDITS *
+--------------------------------------------------------------------------------
+Textures:
+	CG Textures
+	Lunaran
+	Ydnar
+	Remedy Entertainment Ltd.
+	http://www.philipk.net/
+
+
+id		: For the Quake series
+SID/FS		: For Urban Terror
+ydnar		: Q3map2 rocks our little world + Textures
+LT1		: Models galore at a reasonable price 
+#urbanmappers   : <3
+....		: Everyone who I accidentally forgot to mention here :/
+
+
+--------------------------------------------------------------------------------
+* COPYRIGHT / PERMISSIONS *
+--------------------------------------------------------------------------------
+Authors MAY NOT use this level as a base to build additional levels.
+This map MAY NOT be sold, or in any other way turn into profit for any other
+person than the author. This map MAY be distributed on any media as long as this
+media is distributed freely without anyone having to pay for it.
+This level is designed for the Quake 3 Total Conversion "Urban Terror" and is 
+not to be used, replicated or edited for any other Mod, Total Conversion, Game 
+or Game Engine; nor updated without expressed permission from the author for use 
+in any game or game moification including but not limited to the quake 3 
+modification "Urban terror".
+================================================================================
+
+Human, monster, sea, sky.
+A scene on the lid of a sleeper's eye.
+
+================================================================================
+* In Case I Lose This: null_crate RAD Compile.bat *
+================================================================================
+
+@echo off
+
+set map1=ut4_cascade
+set map2=casc_region
+
+ECHO.
+ECHO 1. FULL Compile
+ECHO 2. REGION Compile
+ECHO 3. EDIT Batch Script
+ECHO.
+set choice=
+set /p choice=Choose a number: 
+if '%choice%'=='3' goto EDIT
+if '%choice%'=='2' goto REGION
+set map=%map1%
+goto START
+:REGION
+set map=%map2%
+goto START
+:EDIT
+start notepad "null_crate RADBUMP.bat"
+goto ENDSCRIPT
+:START
+echo.
+echo Compiling: %map%
+echo.
+echo Checked for walking models?
+echo Changed VS on rocketbox shader in null_c.shader?
+pause
+
+
+time /T
+echo STARTING BSP:
+start "BSP: %map%" /low /B /wait "G:\Games\utils\Q3map2\q3map2_fs_20g\q3map2_fs_20g.exe" -meta -fs_basepath "G:\Games\UrbanTerror" -fs_game q3ut4  "G:\Games\UrbanTerror\q3ut4\maps\%map%.map" >> %map%_BSP.txt
+
+time /T
+echo STARTING VIS:
+start "VIS: %map%" /low /B /wait "G:\Games\utils\Q3map2\q3map2_fs_20g\q3map2_fs_20g.exe" -vis -saveprt -fs_basepath "G:\Games\UrbanTerror" -fs_game q3ut4  "G:\Games\UrbanTerror\q3ut4\maps\%map%.bsp" >> %map%_VIS.txt
+
+time /T
+echo STARTING RAD:
+start "RAD: %map%" /low /B /wait "G:\Games\utils\Q3map2\q3map2_fs_20g\FS_q3map_Radbump_2a.exe" -light -bounce 9 -fast -patchshadows -samples 2 -radbump -shade -fs_basepath "G:\Games\UrbanTerror" -fs_game q3ut4 "G:\Games\UrbanTerror\q3ut4\maps\%map%.bsp" >> %map%_RAD.txt
+
+g:
+
+cd games\urbanterror\q3ut4\maps
+
+bsp -si %map%.bsp null_c22.surface
+
+echo start "BSPC: Compiling %map%.aas" /low /wait "G:\Games\quake3\Tools\bspc.exe" -forcesidesvisible -optimize -bsp2aas "G:\Games\UrbanTerror\q3ut4\maps\%map%.bsp"
+
+
+:ENDSCRIPT

@@ -1,0 +1,71 @@
+null_c15 - FS1
+
+	First internal preview
+
+
+null_c21 - FS2
+
+	Sounds
+	Some Spawns
+
+
+ut4_cascade - FS3
+
+	Spawns for all gametypes
+	Surface sounds
+	Converting textures to jpegs (saved ~20meg in pk3)
+	Changed red bomb marker
+	Arena file
+	Levelshot
+	Adjusted sounds a little
+	Adjusted minimap
+	Added clipping to blue spawn bunker roof
+	Can't throw nades over the roof between crates and heli
+
+
+ut4_cascade - FS4
+
+	Some more grenade blocks
+	Optimised some _decals
+	Clipping in "chimney" room
+	Trying nem's crate suggestion
+
+
+ut4_cascade - FS5 - 2010 June 4
+
+	A few more plants on east side - may add more
+	Trying nem's water passage suggestion
+	added a 5 second clip to protect red bomb spawn
+	Clipped above door in storage
+	More cover object around blue flag / black bomb site
+	Extra crate in crate sector
+	
+
+ut4_cascade - FS6 / QA1
+
+	More plants on the east side
+	Moved the sentrys, to stop them from shooting beyond the spawn doors
+	Added missing barrier texture
+	Optimized some models to make room for extra details
+	Added more 'junk' around the center crate area
+	
+
+ut4_cascade - QA2 - 2010_09_05
+
+	Fixed a bunch of sparklies
+	Minor edits to nem's path
+	climbable ivy from nem's path to plant area above boats
+	some more sounds
+	Metal clip under some of the corrugated metal sheets
+	Trying smoke at control monitor
+	Removed the blue spawn door that opens directly onto the blue flag
+	Added another blue spawn on the north part of the arch
+	Added a bit more rubble and decals here and there
+	Trying the red flag in the storage room -  still don't think this is a great idea
+	
+
+ut4_cascade - QA3
+	
+	Some more decals
+	Added clip to pile of cinder blocks in storage hallway
+	Added fire effect to heli bomb explosion

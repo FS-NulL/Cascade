@@ -1,0 +1,29 @@
+- StrombineTex: File Information ------------------------------------------ 01.01.2009 ---
+               Title : Strombine Textures
+            Filename : strombinetex.zip
+              Author : Matt "Lunaran" Breit
+       Email Address : matt@lunaran.com
+           Web Sites : http://www.lunaran.com
+
+-- Content Information -------------------------------------------------------------------
+
+   This texture set is provided as-is, for free, for use in custom maps for Quake4, Doom3,
+DarkPlaces, or whatever other engine they happen to look good in.  Created at the end of 
+2006 to try something that wasn't entirely made of metal, for what eventually became 
+Strombine. Mostly featureless materials, but lots of decals for seams/ridges/stains.  You 
+are perfectly welcome to redistribute them with your map or mod release, as long as I get 
+to see Lunaran in the credits and feel good about myself. 
+
+- Copyright / Permissions ----------------------------------------------------------------
+
+ * You MAY: 
+- Use the included custom textures & shaders, or modifications thereof, provided you give 
+note of such in an attached readme (and please let me know). 
+- Distribute this pak file and/or its contents by any ELECTRONIC means, provided you leave 
+the contents unaltered and include this text file, also unaltered.
+
+ * You MAY NOT:
+- Commercially exploit this file or its contents in any way.
+- Distribute this pak file and/or its contents on any HARD MEDIA whatsoever, including but not 
+limited to magazine coverdisks or level compilations, without prior consent of and negotiation 
+with the author.
